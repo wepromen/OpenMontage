@@ -49,7 +49,8 @@ class TestContract:
         assert t.provider == "azure"
         assert t.runtime == ToolRuntime.API
         assert t.tier == ToolTier.VOICE
-        assert t.fallback == "piper_tts"
+        assert t.fallback == "edge_tts"
+        assert "edge_tts" in t.fallback_tools
         assert "azure-text-to-speech" in t.agent_skills
         assert len(t.capabilities) > 0
 

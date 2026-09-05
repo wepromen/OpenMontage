@@ -228,6 +228,26 @@ class TTSSelector(BaseTool):
     def _adapt_inputs(tool: BaseTool, inputs: dict[str, Any]) -> dict[str, Any]:
         """Translate capability-level controls to provider-native inputs."""
         adapted = dict(inputs)
+        if tool.name == "edge_tts":
+            if inputs.get("voice_id") and not inputs.get("voice"):
+                adapted["voice"] = inputs["voice_id"]
+
+            speed = inputs.get("speaking_rate", inputs.get("speed"))
+            if speed is not None and "rate" not in inputs:
+                percent = round((float(speed) - 1.0) * 100)
+                adapted["rate"] = f"{percent:+d}%" if percent else "+0%"
+
+            pitch = inputs.get("pitch")
+            if isinstance(pitch, (int, float)):
+                adapted["pitch"] = f"{round(float(pitch)):+d}Hz" if pitch else "+0Hz"
+
+            output_format = str(inputs.get("output_format", ""))
+            if output_format.startswith("mp3"):
+                adapted["output_format"] = "mp3"
+            elif output_format.startswith(("wav", "riff", "pcm")):
+                adapted["output_format"] = "wav"
+            return adapted
+
         if tool.name != "azure_tts":
             return adapted
 

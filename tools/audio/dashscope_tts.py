@@ -42,8 +42,9 @@ class DashscopeTTS(BaseTool):
         "Set DASHSCOPE_API_KEY to your Alibaba Cloud DashScope API key.\n"
         "  Get one at https://dashscope.aliyun.com/"
     )
-    fallback = "piper_tts"
+    fallback = "edge_tts"
     fallback_tools = [
+        "edge_tts",
         "doubao_tts",
         "elevenlabs_tts",
         "openai_tts",

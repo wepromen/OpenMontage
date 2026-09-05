@@ -40,8 +40,8 @@ class DoubaoTTS(BaseTool):
         "Optional: set DOUBAO_SPEECH_VOICE_TYPE to the default speaker voice.\n"
         "Use the new console API key flow; do not pass app id/access token as the API key."
     )
-    fallback = "google_tts"
-    fallback_tools = ["google_tts", "elevenlabs_tts", "openai_tts", "piper_tts"]
+    fallback = "edge_tts"
+    fallback_tools = ["edge_tts", "google_tts", "elevenlabs_tts", "openai_tts", "piper_tts"]
     agent_skills = ["doubao-tts", "text-to-speech"]
 
     capabilities = [

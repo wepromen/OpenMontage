@@ -38,8 +38,8 @@ class OpenAITTS(BaseTool):
         "  export OPENAI_API_KEY=your_key_here\n"
         "Get a key at https://platform.openai.com/"
     )
-    fallback = "piper_tts"
-    fallback_tools = ["piper_tts"]
+    fallback = "edge_tts"
+    fallback_tools = ["edge_tts", "piper_tts"]
     # No Layer 3 skill is vendored for the OpenAI speech API. The nearest
     # candidate, `text-to-speech`, documents HeyGen's Starfish endpoints and
     # would send the agent at the wrong provider, so this stays empty rather

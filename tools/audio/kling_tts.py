@@ -62,7 +62,7 @@ class KlingTTS(BaseTool):
         "voice cloning without a configured official voice_id",
         "auto-discovering voices",
     ]
-    fallback_tools = ["doubao_tts", "elevenlabs_tts", "openai_tts", "google_tts", "piper_tts"]
+    fallback_tools = ["edge_tts", "doubao_tts", "elevenlabs_tts", "openai_tts", "google_tts", "piper_tts"]
 
     input_schema = {
         "type": "object",

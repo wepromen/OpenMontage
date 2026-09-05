@@ -45,8 +45,8 @@ class FishAudioTTS(BaseTool):
         "Create voice models in the fish.audio playground and pass their id as\n"
         "reference_id to reuse a cloned voice."
     )
-    fallback = "elevenlabs_tts"
-    fallback_tools = ["elevenlabs_tts", "google_tts", "openai_tts", "piper_tts"]
+    fallback = "edge_tts"
+    fallback_tools = ["edge_tts", "elevenlabs_tts", "google_tts", "openai_tts", "piper_tts"]
     agent_skills = ["fish-audio-tts", "text-to-speech"]
 
     capabilities = [

@@ -39,7 +39,7 @@ class FalElevenLabsTTS(BaseTool):
         "Set FAL_KEY to a fal.ai API key. No separate ElevenLabs key is needed. "
         "Get a fal.ai key at https://fal.ai/dashboard/keys"
     )
-    fallback_tools = ["google_tts", "piper_tts", "elevenlabs_tts"]
+    fallback_tools = ["edge_tts", "google_tts", "elevenlabs_tts", "piper_tts"]
     agent_skills = ["elevenlabs"]
 
     capabilities = [

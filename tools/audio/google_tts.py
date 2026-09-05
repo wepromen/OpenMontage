@@ -50,8 +50,8 @@ class GoogleTTS(BaseTool):
         "Auth option B — service account: set GOOGLE_APPLICATION_CREDENTIALS to the\n"
         "  path of a service-account JSON key (needs the 'google-auth' package)."
     )
-    fallback = "openai_tts"
-    fallback_tools = ["openai_tts", "elevenlabs_tts", "piper_tts"]
+    fallback = "edge_tts"
+    fallback_tools = ["edge_tts", "openai_tts", "elevenlabs_tts", "piper_tts"]
     agent_skills = ["text-to-speech"]
 
     capabilities = [

@@ -694,6 +694,7 @@ class TestCapabilityMetadata:
             "azure",
             "dashscope",
             "doubao",
+            "edge_tts",
             "elevenlabs",
             "fish_audio",
             "fal.ai",

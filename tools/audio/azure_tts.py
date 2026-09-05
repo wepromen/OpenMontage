@@ -63,8 +63,8 @@ class AzureTTS(BaseTool):
         "'Keys and Endpoint' page. Optionally set AZURE_TTS_ENDPOINT to a full "
         "custom TTS host (e.g. https://<region>.tts.speech.microsoft.com)."
     )
-    fallback = "piper_tts"
-    fallback_tools = ["elevenlabs_tts", "openai_tts", "piper_tts"]
+    fallback = "edge_tts"
+    fallback_tools = ["edge_tts", "elevenlabs_tts", "openai_tts", "piper_tts"]
     agent_skills = ["azure-text-to-speech", "text-to-speech"]
 
     capabilities = [

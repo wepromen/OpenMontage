@@ -40,8 +40,8 @@ class ElevenLabsTTS(BaseTool):
         "If fal_elevenlabs_tts is available, use it instead to access ElevenLabs "
         "speech through fal.ai without a separate ElevenLabs key."
     )
-    fallback = "openai_tts"
-    fallback_tools = ["openai_tts", "piper_tts"]
+    fallback = "edge_tts"
+    fallback_tools = ["edge_tts", "openai_tts", "piper_tts"]
     agent_skills = ["elevenlabs", "text-to-speech"]
 
     capabilities = [
